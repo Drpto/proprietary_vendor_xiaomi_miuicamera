@@ -3,13 +3,17 @@
 ### Cloning :
 • Clone this repo in vendor/xiaomi/miuicamera in your working directory by :
 ```
-git clone https://gitlab.com/SonalSingh18/vendor_xiaomi_miuicamera.git -b thirteen vendor/xiaomi/miuicamera
+git clone https://codeberg.org/reche/proprietary_vendor_xiaomi_miuicamera.git vendor/xiaomi/miuicamera
 ```
 ### Changes Required :
 • You will need following changes in your device tree:
 
 • Makefile changes
-- [Inherit MiuiCamera](https://github.com/SonalSingh18/android_device_xiaomi_sm6250-common/commit/6e5ced47138b7299bc5a9cdf9b631b48101cdb08)
+
+```
+# MiuiCamera
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
+```
 
 • Props Changes
 - [Add miuicamera to aux packagelist](https://github.com/SonalSingh18/android_device_xiaomi_sm6250-common/commit/5311c2126d84a3f54311850f8bf0471f288158d6)
